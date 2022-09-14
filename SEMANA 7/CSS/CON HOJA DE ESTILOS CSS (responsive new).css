@@ -131,7 +131,8 @@ iframe{
     "main main sidebar" 300px
     "main main sidebar" 300px
     "main main sidebar" 250px
-    "footer footer footer" 150px / 1000px 150px 300px;
+    "footer footer footer" 150px / 
+    1000px 250px 90px;
 }
 #redes a {
     padding: 0;
@@ -140,39 +141,12 @@ iframe{
 #redes a i:hover{
     transform: scaleX(1.5);
 }
-/*ESTILOS ICONOS FONTAWESOME */
-.fa-home{
-    color:white;
+/*ESTILOS A TODOS LOS ICONOS FONTAWESOME */
+i[class^="fa"]{
+    color: white;
     font-size: 18px;
-}
-
-.fa-cart-arrow-down{
-    color:white;
-    font-size: 18px;
-}
-.fa-charging-station{
-    color:white;
-    font-size: 18px;
-}
-.fa-wpforms{
-    color:white;
-    font-size: 18px;
-}
-.fa-user{
-    color:white;
-    font-size: 18px;
-}
-/*ESTILOS AL BUSCADOR SEARCH*/
-.fa-search{
-    color:white;
-    font-size: 18px;
-}
-/*ICONOS FONTAWESOME BAR SOCIAL*/
-.fa {
-    color:white;
-    border: 1px solid transparent;
-    margin: 0px;
-}
+} 
+/* ICONOS FONTAWESOME BAR SOCIAL */
 .fa-youtube-square{
     font-size: 32px;
     background-color: red;
@@ -250,4 +224,51 @@ iframe{
     .buscarbox{
         display: none;
     }   
-}
+    }
+    /* SECCION VISTA DE CELULAR */
+    @media (max-width:640px){
+        #grid-container{
+            grid-template:
+            "header" 150px
+            "nav" 50px
+            "main" 1400px
+            "sidebar" 800px
+            "footer" 100px /
+            500px;
+            font-size: 60%;
+        }
+        /* NOTA:LA BARRA <NAV> SE PROGRAMARA CON JAVASCRIPT POR MEDIO DE FUNCIONAES EN BOTON HAMBURQUESA*/
+        #menu{
+            display: block;
+            position:absolute;
+            top: 10px;
+            right: 120px;
+            z-index: 99; /*SE DEFINE CAPA ENCIMA DEL TEXTO DE CONTENIDO HTML*/
+            cursor: pointer;
+        }
+        #main{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 100%;
+            height: auto;
+        }
+        .programa{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid black;
+        }
+        .iframe{
+            max-width: 100%;
+            height: auto;
+        }
+        .buscarbox{
+            display:none;
+        }
+    }
