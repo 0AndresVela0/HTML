@@ -1,0 +1,31 @@
+@font-face{
+  font-family: Maccrap;
+  src:url(../img/maccrapasphalt\ personal\ use.ttf)
+}
+body {
+  color-scheme: red;
+  /* font-family: 'Bungee Spice', cursive; */
+  background-image: url(../img/fondo.png);
+  font-family: Maccrap;
+  }
+  
+  .navbar-brand {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.966);
+    font-weight: bold;
+  }
+  
+  #testimonial {
+    /* background: #f1f1f1; */
+    padding: 50px 0 30px 0;
+    text-align:center;
+    margin-top: 40px;
+  }
+  
+  #contact {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around ;
+    flex-wrap: wrap;
+  }
+  
